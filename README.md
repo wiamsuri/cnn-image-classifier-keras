@@ -24,3 +24,12 @@ sed -ie "s/#c.NotebookApp.ip = 'localhost'/#c.NotebookApp.ip = '*'/g" ~/.jupyter
 
 jupyter notebook --ip=0.0.0.0 --no-browser
 ```
+
+## Load images for traning and testing
+```
+curl https://s3-ap-southeast-1.amazonaws.com/input-dataset/fruit_images.zip -o ~/images.zip
+
+unzip ~/images.zip -d .
+
+rm ~/images.zip
+```
